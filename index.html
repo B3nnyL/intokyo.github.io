@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-sm-3">
+    <img src="/img/echead.jpg" alt="Ethan Chen" class="img-circle img-responsive" width=140px height=140px>
+  </div>
+  <div class="col-sm-3">
+	<ul class="contact-list">
+	  <h4>{{ site.name }}</h4>
+	  <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+	  <li><a href="https://github.com/intokyo">Github@{{ site.github }}</a></li>
+	  <li><a href="http://weibo.com/togalaxy">Weibo@{{ site.weibo }}</a></li>
+	  <li><a href="https://twitter.com/atcgp">Twitter@{{ site.twitter }}</a></li>
+	</ul> 
+  </div>
+
+  <div class="col-sm-6">
+    <h2 class="page-heading">Posts</h2>
+	<ul class="post-list">
+	{% for post in site.posts %}
+	  <li>
+	    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+		<h2>
+		  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		</h2>
+	  </li>
+	{% endfor %}
+	</ul>
+  </div>
+</div>
