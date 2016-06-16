@@ -5,18 +5,29 @@ layout: default
 <div class="jumbotron">
 	<div class="row">
 	  <div class="col-sm-6">
-		<div><img src="/img/echead.jpg" alt="Ethan Chen" class="img-circle img-responsive center-block" width=140px height=140px></div>
+		<div><img src="/img/echead.jpg" alt="Ethan Chen" class="img-circle img-responsive center-block" width=180px height=180px></div>
 	    </br>
 		
 	  </div>
 	  <div class="col-sm-6">
-		<ul class="contact-list">
-		  <h4><span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> {{ site.name }}</h4>
-		  <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-		  <li><a href="https://github.com/intokyo">Github@{{ site.github }}</a></li>
-		  <li><a href="http://weibo.com/togalaxy">Weibo@{{ site.weibo }}</a></li>
-		  <li><a href="https://twitter.com/atcgp">Twitter@{{ site.twitter }}</a></li>
-		</ul> 
+		<h4 class="text-center"><span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> {{ site.name }}</h4>
+		</br>
+		<div class="row">
+		  <div class="col-xs-3">
+		    <a href="mailto:{{ site.email }}"><img class="img-responsive" src="/img/mail.png" alt="E-mail icon" width=35px height=35px></a><b>E-mail</b>
+		  </div>
+		  <div class="col-xs-3">
+		    <a href="https://github.com/intokyo"><img class="img-responsive" src="/img/gh.png" alt="Github icon" width=35px height=35px></a><b>Github</b>
+		  </div>
+		  <div class="col-xs-3">
+		    <a href="#"><img class="img-responsive" src="/img/fb.png" alt="Facebook icon" width=35px height=35px></a><b>Facebook</b>
+		  </div>
+		  <div class="col-xs-3">
+		    <a href="https://twitter.com/atcgp"><img class="img-responsive" src="/img/tw.png" alt="Twitter icon" width=35px height=35px></a><b>Twitter</b>
+		  </div>
+		</div>
+		</br>
+		</br>
         {% include js.html %}
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="element"></span> 
 	  </div>
