@@ -5,10 +5,8 @@ layout: default
 <div class="jumbotron">
 	<div class="row">
 	  <div class="col-sm-6">
-		<img src="/img/echead.jpg" alt="Ethan Chen" class="img-circle img-responsive" width=140px height=140px> 
+		<div><img src="/img/echead.jpg" alt="Ethan Chen" class="img-circle img-responsive center-block" width=140px height=140px></div>
 	    </br>
-	    {% include js.html %}
-        <span class="element"></span> 
 		
 	  </div>
 	  <div class="col-sm-6">
@@ -19,6 +17,8 @@ layout: default
 		  <li><a href="http://weibo.com/togalaxy">Weibo@{{ site.weibo }}</a></li>
 		  <li><a href="https://twitter.com/atcgp">Twitter@{{ site.twitter }}</a></li>
 		</ul> 
+        {% include js.html %}
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="element"></span> 
 	  </div>
     </div>
 </div>
