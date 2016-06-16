@@ -13,7 +13,7 @@ layout: default
 	  </div>
 	  <div class="col-sm-6">
 		<ul class="contact-list">
-		  <h4>{{ site.name }}</h4>
+		  <h4><span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> {{ site.name }}</h4>
 		  <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
 		  <li><a href="https://github.com/intokyo">Github@{{ site.github }}</a></li>
 		  <li><a href="http://weibo.com/togalaxy">Weibo@{{ site.weibo }}</a></li>
@@ -25,17 +25,51 @@ layout: default
 	
 <div class="container">
   
-  <h2 class="page-heading">Posts</h2>
+  <h2 class="page-heading"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts</h2>
   <ul class="post-list">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
 	<li>
 	  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 	  <h2>
 		<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 	  </h2>
+	  {{ post.excerpt }}
+	  </br>
+	  </br>
+	  </br>
+      <a type="button" class="btn btn-success btn-xs" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+	  </br>
+	  </br>
+	  </br>
 	</li>
   {% endfor %}
   </ul>
+  
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+	  {% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+	  {% else %}
+		<span>&laquo; Prev</span>
+	  {% endif %}
+
+	  {% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		  <em>{{ page }}</em>
+		{% elsif page == 1 %}
+		  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+		{% else %}
+		  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+		{% endif %}
+	  {% endfor %}
+
+	  {% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+	  {% else %}
+		<span>Next &raquo;</span>
+	  {% endif %}
+    </div>
+  {% endif %}
 </div>
 
 

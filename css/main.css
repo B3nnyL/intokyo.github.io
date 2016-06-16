@@ -1,7 +1,11 @@
-.jumbotron {
-    padding-top:70px;
-    background-color:seashell;
+body {
+    padding-top: 80px
 
+}
+
+
+.jumbotron {
+    background-color:seashell;
 
 }
 
@@ -50,3 +54,4 @@
     50% { opacity:0; }
     100% { opacity:1; }
 }
+

@@ -216,9 +216,9 @@
 		// typing and backspacing speed
 		typeSpeed: 0,
 		// time before typing starts
-		startDelay: 0,
+		startDelay: 200,
 		// time before backspacing
-		backDelay: 1000,
+		backDelay: 2500,
 		// loop
 		loop: true,
 		// false = infinite
@@ -232,7 +232,7 @@
 
 $(function(){
         $(".element").typed({
-        strings: ["First sentence.", "Second sentence.", "Third sentence.", "Fourth sentence.", "Fifth sentence."],
+        strings: ["Welcome to my blog!", "Currently I'm a MA student in the University of Tokyo.", "I started programming in June 2016.", "I speak Chinese, English, and Japanese.", "Top two of my bucket list:", "Build beautiful websites and make awesome games. :)"],
         typeSpeed: 0
         });
     });
